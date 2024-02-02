@@ -1,0 +1,43 @@
+//Question 5
+//Q3.create a class monkey with jump() and bite() methods . Crete a class kuman which inherits this Monkey class and implements BasicAnimal interface with eat() and steep methods
+ //5.Demonstrate polymorphism using monkey class from Q 3
+
+class Monkey{
+	void jump(){
+		System.out.println("Jumping...");	
+	}
+	void bite(){
+		System.out.println("Bitting");
+	}
+}
+interface BasicAnimal{
+	void eat();
+	void sleep();
+}
+
+class Human extends Monkey implements BasicAnimal{
+	void speak(){
+		System.out.println("Hello sir!");
+	}
+	
+	public void eat(){
+		System.out.println("Eating ");
+	}
+	public void sleep(){
+		System.out.println("Sleepng");
+	}
+}
+
+
+public class DAY13_PQ5 {
+	public static void main(String[] args) {
+    		Monkey m1=new Human();
+		m1.jump();
+		m1.bite();
+	
+		BasicAnimal lovish = new Human();
+		lovish.eat();
+		lovish.sleep();
+		
+  	}
+}

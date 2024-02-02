@@ -1,0 +1,39 @@
+//Question 3
+//3.create a class monkey with jump() and bite() methods . Crete a class kuman which inherits this Monkey class and implements BasicAnimal interface with eat() and steep methods
+
+class Monkey{
+	void jump(){
+		System.out.println("Jumping...");	
+	}
+	void bite(){
+		System.out.println("Bitting");
+	}
+}
+interface BasicAnimal{
+	void eat();
+	void sleep();
+}
+
+class Human extends Monkey implements BasicAnimal{
+	void speak(){
+		System.out.println("Hello sir!");
+	}
+	
+	public void eat(){
+		System.out.println("Eating ");
+	}
+	public void sleep(){
+		System.out.println("Sleepng");
+	}
+}
+
+
+public class DAY13_PQ3 {
+	public static void main(String[] args) {
+    		
+		Human harry = new Human();
+		harry.sleep();
+		
+		
+  	}
+}

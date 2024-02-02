@@ -1,0 +1,16 @@
+//Question 6
+//6.Create an InterFase TvRemote and use it to inhert another interfase Smart Tv Remote 
+
+//7.Create a class Tv which implements TvRemote interFace from Q 6
+
+
+interface TvRemote {
+    void turnOn();
+    void turnOff();
+    void changeChannel(int channel);
+}
+
+interface SmartTvRemote extends TvRemote {
+    void connectToWiFi();
+    void useSmartFeatures();
+}

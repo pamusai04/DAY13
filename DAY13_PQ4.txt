@@ -1,0 +1,41 @@
+//Question 4
+//4. create a class TelePhone with ring(),lift() and disconnect() method as abstract methods create another class smart Telephone and demonstrare polymprphism
+
+
+//6.Create an InterFase TvRemote and use it to inhert another interfase Smart Tv Remote 
+
+//7.Create a class Tv which implements TvRemote interFace from Q 6
+
+abstract class Telephone {
+    abstract void ring();
+    abstract void lift();
+    abstract void disconnect();
+}
+
+class SmartTelephone extends Telephone {
+    
+    void ring() {
+        System.out.println("Smartphone is ringing!");
+    }
+
+  
+    void lift() {
+        System.out.println("Call lifted on the smartphone.");
+    }
+
+
+    void disconnect() {
+        System.out.println("Call disconnected from the smartphone.");
+    }
+}
+
+
+
+public class DAY13_PQ4 {
+	public static void main(String[] args) {
+    		Telephone phone=new SmartTelephone();
+      		phone.ring();
+      		phone.lift();
+      		phone.disconnect();
+  }
+}

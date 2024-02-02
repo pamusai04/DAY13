@@ -1,0 +1,30 @@
+//Question 1
+//1.create an abstract class pen with methods wrire() and refill() as abstract methods 
+
+abstract class Pen{
+  abstract void write();
+  abstract void refill();
+}
+class FountainPen extends Pen{
+  void write(){
+    System.out.println("Write");
+  }
+
+  void refill(){
+    System.out.println("Refill");
+  }
+
+  void changeNib(){
+    System.out.println("Change the nib");
+  }
+
+}
+
+
+public class DAY13_PQ1 {
+	public static void main(String[] args) {
+    		FountainPen pen = new FountainPen();
+		pen.changeNib();
+		
+  	}
+}

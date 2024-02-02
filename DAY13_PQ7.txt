@@ -1,0 +1,47 @@
+//Question 7
+//6.Create an InterFase TvRemote and use it to inhert another interfase Smart Tv Remote 
+
+//7.Create a class Tv which implements TvRemote interFace from Q 6
+
+interface TvRemote {
+    void turnOn();
+    void turnOff();
+    void changeChannel(int channel);
+}
+
+interface SmartTvRemote extends TvRemote {
+    void connectToWiFi();
+    void useSmartFeatures();
+}
+
+class MySmartTvRemote implements SmartTvRemote {
+  
+    public void turnOn() {
+        System.out.println("Smart TV is turned on.");
+    }
+
+    public void turnOff() {
+        System.out.println("Smart TV is turned off.");
+    }
+
+    public void changeChannel(int channel) {
+        System.out.println("Channel changed to: " + channel);
+    }
+    public void connectToWiFi() {
+        System.out.println("Smart TV connected to WiFi.");
+    }
+    public void useSmartFeatures() {
+        System.out.println("Using smart features of the Smart TV.");
+    }
+}
+
+public class DAY13_PQ7 {
+    public static void main(String[] args) {
+        SmartTvRemote mySmartRemote = new MySmartTvRemote();
+
+        mySmartRemote.turnOn();
+        mySmartRemote.changeChannel(5);
+        mySmartRemote.useSmartFeatures();
+        mySmartRemote.turnOff();
+    }
+}
